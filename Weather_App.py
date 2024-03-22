@@ -19,3 +19,12 @@ def get_forecast(api_key, city):
     url = f"http://api.openweathermap.org/data/2.5/forecast?q={city}&appid={api_key}&units=metric"
     response = requests.get(url)
     return response.json()
+
+def display_forecast(data):
+    if data["cod"] == 200:
+        print(f"Forecast for {data["city"]["name"]}:")
+        for forecast in data["list"]:
+            print(f"Date: {forecast["dt_txt"]}, Temperature: {forecast["main"]["temp"]}°C, Weather: {forecast["weather"][0]["description"]}")
+
+    else:
+        print("City not found, Please try again.")
