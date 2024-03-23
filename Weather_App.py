@@ -14,7 +14,7 @@ def get_weather(api_key, city):
 def display_current_weather(data):
     if data["cod"] == 200:
         print(f"Weather in {data["name"]}:")
-        print(f"Temperature: {int(data["main"]["temp"])-273.15}°C")
+        print(f"Temperature: {int(data["main"]["temp"])-273.15}°C") # It isreturn temperature in kelvin its conver into Celcious
         print(f"Current Pressure(in hPa unit): {data["main"]["pressure"]}")
         print(f"Humidity: {data["main"]["humidity"]}%")
         print(f"Weather: {data["weather"][0]["description"]}")
