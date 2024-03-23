@@ -28,3 +28,17 @@ def display_forecast(data):
 
     else:
         print("City not found, Please try again.")
+
+def main():
+    api_key = "4dd1bfc3465ee3efb2bdbfefb7b348f7"
+    city = input("Enter city name: ")
+
+    # Get and Display current weather
+    current_weather_data = get_weather(api_key=api_key, city=city)
+    display_current_weather(current_weather_data)
+
+    # Get and Display Forecast
+    forecast_data = get_forecast(api_key=api_key, city=city)
+    display_forecast(forecast_data)
+
+
