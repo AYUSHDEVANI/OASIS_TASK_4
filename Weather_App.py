@@ -23,8 +23,8 @@ def display_current_weather(data):
 
 
 def main():
-    api_key = "4dd1bfc3465ee3efb2bdbfefb7b348f7"
-    api_key = "2b2974487c3e211a19781fe2ef39cf1b"
+    # api_key = ""
+    api_key = "YOUR_API_KEY"
     city = input("Enter city name: ")
 
     # Get and Display current weather
